@@ -1,42 +1,40 @@
 # Yumelit Apps
 
-## Overview
-The Yumelit Apps is a Streamlit web application designed to help users identify, plan, and achieve their dreams. Through an interactive interface, users can set goals, track progress, and find inspiration to turn their aspirations into reality.
+## 概要
+Yumelit Appsは、あなたの夢を照らします。  
+  
+あなたが夢を見つけ、計画し、達成するのを助けるためにデザインしました。  
+インタラクティブに目標を設定し、進捗状況を追跡し、夢を現実に変えるための手立てを提供します。  
 
-## Features
-- User-friendly interface for setting and tracking dreams
-- Multi-page layout for organized navigation
-- Reusable components for enhanced user experience
-- Utility functions for data processing and validation
+## 特徴
+- 夢を設定し、追跡するためのユーザーフレンドリーなインターフェース
+- 整理されたナビゲーションのための複数ページレイアウト
+- 再利用可能なコンポーネントによるユーザーエクスペリエンスの向上
+- データ処理と検証のためのユーティリティ機能
 
-## Installation
-To get started with the Dream Achiever App, follow these steps:
+## インストール
+Yumelit Appsを使い始めるには、以下の手順に従ってください：
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
+1. リポジトリをクローンします：
 
-2. Navigate to the project directory:
-   ```
-   cd dream-achiever-app
-   ```
-
-3. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-## Usage
-To run the application, execute the following command in your terminal:
+```bash
+git clone <repository-url>
 ```
+
+2. プロジェクトディレクトリに移動します：
+```bash
+cd Yumelit
+```
+
+3. 必要な依存関係をインストールします：
+```bash
+pip install -r requirements.txt
+```
+
+## 使用方法
+アプリケーションを実行するには、ターミナルで以下のコマンドを実行します：
+```bash
 streamlit run streamlit_app.py
 ```
 
-Once the application is running, you can access it in your web browser at `http://localhost:8501`.
-
-## Contributing
-Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+アプリケーションが実行されると、ウェブブラウザ http://localhost:8501 からアクセスできます。
