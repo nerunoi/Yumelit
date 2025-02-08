@@ -1,8 +1,14 @@
 import streamlit as st
+from utils.data_handler import save_data, load_data
 
 st.title("1️⃣ First App")
 
-why = st.text_input(label="なぜ、夢を叶える？", placeholder="夢を叶えて、どうしますか？")
+# Load existing data
+data = load_data()
+why_placeholder = data.get("why", "")
+what_placeholder = data.get("what", "")
+
+why = st.text_input(label="なぜ、夢を叶える？", placeholder="夢を叶えて、どうしますか？", value=why_placeholder)
 
 st.markdown("""
         夢を叶えるための道筋は遠く、険しいものです。  
@@ -14,7 +20,15 @@ st.markdown("""
         **Yumelit**は、その夢を叶えます。  
 """)
 
-what = st.text_input(label="あなたの夢は？", placeholder="一文で、簡潔に")
+what = st.text_input(label="あなたの夢は？", placeholder="一文で、簡潔に", value=what_placeholder)
+
+if st.button("保存"):
+    if why and what:
+        data = {"why": why, "what": what}
+        save_data(data)
+        st.success("データが保存されました！")
+    else:
+        st.warning("すべてのフィールドを入力してください。")
 
 st.text("次のAppに進んでください。")
 
