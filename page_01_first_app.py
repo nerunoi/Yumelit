@@ -5,18 +5,22 @@ st.title("1️⃣ First App")
 
 # Load existing data
 data = load_data()
+who_placeholder = data.get("who", "")
 why_placeholder = data.get("why", "")
 what_placeholder = data.get("what", "")
+
+who = st.text_input(label="私は、", placeholder="あなたの呼び名", value=who_placeholder)
 
 why = st.text_input(label="なぜ、夢を叶える？", placeholder="夢を叶えて、どうしますか？", value=why_placeholder)
 
 st.markdown("""
         夢を叶えるための道筋は遠く、険しいものです。  
-        その夢は、本当にあなたが叶える必要がありますか？  
+        その夢を叶えれば、あなたは幸せになれますか？  
+        その夢は、本当に**あなたが**叶える必要がありますか？  
         他人の夢よりも、優先されるべきものですか？  
-        あなたに夢が無いのなら、無くてもいいのです。  
+        あなたに夢が無いのなら、それでもいいのです。  
         それでも、どうしても、叶えたい夢があるのなら、  
-            
+          
         **Yumelit**は、その夢を叶えます。  
 """)
 
@@ -24,7 +28,7 @@ what = st.text_input(label="あなたの夢は？", placeholder="一文で、簡
 
 if st.button("保存"):
     if why and what:
-        data = {"why": why, "what": what}
+        data = {"who": who, "why": why, "what": what}
         save_data(data)
         st.success("データが保存されました！")
     else:

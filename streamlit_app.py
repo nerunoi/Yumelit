@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(
     page_title="Yumelit",
     page_icon="💡",
-    layout="wide"
+    # layout="wide"
 )
 
 # Multi pages
@@ -14,6 +14,7 @@ pages = {
     ],
     "100 Apps": [
         st.Page("page_01_first_app.py", title="First App", icon="1️⃣"),
+        st.Page("page_02_second_app.py", title="Second App", icon="2️⃣"),
     ],
 }
 
